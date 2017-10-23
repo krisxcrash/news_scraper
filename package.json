@@ -1,0 +1,24 @@
+{
+  "name": "news_scraper",
+  "version": "1.0.0",
+  "description": "a web app that lets users read and leave comments on the latest news",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisxcrash/news_scraper.git"
+  },
+  "keywords": [
+    "news",
+    "scraper"
+  ],
+  "author": "kristine martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krisxcrash/news_scraper/issues"
+  },
+  "homepage": "https://github.com/krisxcrash/news_scraper#readme"
+}

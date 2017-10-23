@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Tech Crunch Scraper</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+    </head>
+    <body>
+
+<!-- Navbar -->
+    <section>
+        <nav class="navbar  navbar-inverse  navbar-fixed-top">
+            <div class="container">
+            <button type="button" class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+            >
+            <span class="sr-only"> Toggle navigation</span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+            <span class="icon-bar"> </span>
+            </button>
+        
+             <a class="navbar-brand" href="#"> Tech Crunch News</a>
+             
+                 <div class="navbar-collapse collapse">
+                     <ul class="nav navbar-nav navbar-right">
+                       <li class="scraper"><a href="#"><button>Scrape New Articles</button></a> </li>
+                       <li> <a href="index.html">Home</a> </li>
+                       <li> <a href="#">Saved Articles</a> </li>
+                     </ul>
+                 </div>
+            </div>
+          </nav>
+    </section>
+
+<!-- Body -->
+<!-- Jumbotron -->
+<section>
+<div class="container container-fluid">
+    <div class= "jumbotron text-center">
+        <h1 class="header">Tech Crunch News</h1>
+        <h2>Saved Articles</h2>
+    </div>
+</div>
+</section>
+
+<!-- News Articles -->
+<section>
+<div class="container container-fluid">
+    <div id="articles">
+
+    </div>
+
+    </div>
+</div>
+</section>
+
+<!-- Comments Modal -->
+
+<div class="bootbox modal fade in" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true" style="margin-top: -10px;">×</button>
+                    <div class="bootbox-body">
+                        <div class="container-fluid text-center">
+                            <h4>Notes For Article: 59ec0eb257619400111860b4</h4>
+                            <hr>
+                            <ul class="list-group note-container">
+                                <li class="list-group-item note">Not one added at 9:37<button class="btn btn-danger note-delete">x</button></li>
+                                <li class="list-group-item note">Note two<button class="btn btn-danger note-delete">x</button></li>
+                                <li class="list-group-item note">note three<button class="btn btn-danger note-delete">x</button></li>
+                            </ul>
+                            <textarea placeholder="New Note" rows="4" cols="60"></textarea>
+                            <button class="btn btn-success save">Save Note</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<!-- Footer -->
+        <div class="navbar  navbar-inverse navbar-fixed-bottom"> 
+            <div class="container">
+              <div class="navbar-text pull=left">
+               <p> © KxC Digital 2017.</p>
+              </div>
+              
+<!-- JavaScript & jQuery Links -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
