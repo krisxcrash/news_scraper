@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/krisxcrash/news_scraper/issues"
   },
-  "homepage": "https://github.com/krisxcrash/news_scraper#readme"
+  "homepage": "https://github.com/krisxcrash/news_scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4",
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
+  }
 }
