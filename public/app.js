@@ -3,16 +3,18 @@ $.getJSON("/articles", function(data) {
     // For each one
     for (var i = 0; i < data.length; i++) {
       // Display the apropos information on the page
-      $("#articles").append(`<div className='row'>
-      <div className='col-md-12'>
-      <div className='panel panel-primary'>
-      <div className='panel-heading'>
-      <h3 className='panel-title> <a href='data[i].link'>${data[i].title}</h3></a>
+      $("#articles").append(`<div class='row'>
+      <div class='col-md-12'>
+      <div class='panel panel-primary'>
+      <div class='panel-heading'>
+      <h3 class='panel-title> <a href='data[i].link'>${data[i].title}</h3></a>
       </div>
-      <div className="panel-body">${data[i].description}
+      <div class="panel-body">${data[i].description}
       </div>
       </div>
-      </div>`)
+      </div>`);
+
+      console.log(data[i].description);
     }
   });
   
