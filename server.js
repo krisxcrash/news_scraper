@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds157624.mlab.com:57624/tcscraper");
+mongoose.connect("mongodb://a:123@ds157624.mlab.com:57624/tcscraper");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -150,5 +150,5 @@ app.post("/articles/:id", function(req, res) {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function() {
-  console.log(`App running on ${PORT}!`);
+  console.log("App running on " + PORT);
 });
