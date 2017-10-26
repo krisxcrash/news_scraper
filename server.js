@@ -59,21 +59,27 @@ app.get("/scraper", function(req, res) {
               var result = {};
         
               // Add the text and href of every link, and save them as properties of the result object
-              result.title = $(this).children("a").text();
-              result.link = $(this).children("a").attr("href");
-              result.description =$(this).children(".byline").text();
+              result.title = $(this).find(".post-title").children("a").text();
+              result.link = $(this).find("a").attr("href");
+              result.description =$(this).find(".excerpt").text();
+              
+              console.log(result);
 
+        if (result.title && result.link && result.description) {
+            
       // Using our Article model, create a new entry
       // This effectively passes the result object to the entry (and the title and link)
       var entry = new Article(result);
-
-      // Now, save that entry to the db
-      entry.save(function(err, doc, next) {
-        // Log any errors
-        if (err) {
-          console.log(err);
+      
+            // Now, save that entry to the db
+            entry.save(function(err, doc, next) {
+              // Log any errors
+              if (err) {
+                console.log(err);
+              }
+            });
         }
-      });
+
 
     });
     res.redirect("/articles");
@@ -129,7 +135,7 @@ app.post("/articles/:id", function(req, res) {
     // Otherwise
     else {
       // Use the article id to find and update it's note
-      Article.findOneAndUpdate({ "_id": req.params.id }, { "note": doc._id })
+      Article.findOneAndUpdate({ "_id": req.params.id }, { $push: {"note": doc._id }})
       // Execute the above query
       .exec(function(err, doc) {
         // Log any errors
